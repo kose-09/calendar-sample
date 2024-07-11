@@ -4,6 +4,6 @@ class EventsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render 'calendar' }
-    end 
+    end
   end
 end
