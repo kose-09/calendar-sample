@@ -1,13 +1,13 @@
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
-document.addEventListener('DOMContentLoaded', function(){
-  var calendarE1 = document.getElementByTd('calendar');
-  
-  var calendar = new Calendar(calendarE1, {
-    plugins: [dayGridPlugin],
-    initialView: 'dayGridMonth'
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new Calendar(calendarEl, {
+    plugins: [ dayGridPlugin ],
+    initialView: 'dayGridMonth',
+    events: eventData // eventData変数を使用してイベントデータを渡す
   });
-  
+
   calendar.render();
 });
