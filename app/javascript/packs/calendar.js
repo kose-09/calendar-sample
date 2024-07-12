@@ -1,14 +1,14 @@
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import listPlugin from "@fullcalendar/list"; //この行を追加
+import listPlugin from "@fullcalendar/list"; 
 
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
   var calendar = new Calendar(calendarEl, {
-    plugins: [dayGridPlugin, listPlugin],　//listPluginを追加
+    plugins: [dayGridPlugin, listPlugin],　
     initialView: 'dayGridMonth',
+    locale: "jp",
     events: '/events', 
-    //レスポンシブ処理を追加
     windowResize: function () { 
         if (window.innerWidth < 991.98) {
             calendar.changeView('listMonth');
